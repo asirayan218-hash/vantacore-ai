@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VantaCore AI — Modern Frontend & Custom AI Systems</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #07090e; color: #f1f5f9; font-family: system-ui, -apple-system, sans-serif; }
+    .glass { background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .glow { box-shadow: 0 0 40px -10px rgba(56, 189, 248, 0.35); }
+  </style>
+</head>
+<body class="antialiased selection:bg-sky-500 selection:text-white">
 
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 glass">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2 font-bold text-lg tracking-tight">
+        <span class="w-2.5 h-2.5 rounded-full bg-sky-400 animate-pulse"></span>
+        VantaCore <span class="text-sky-400">AI</span>
+      </div>
+      <a href="#contact" class="text-xs font-semibold bg-sky-500 hover:bg-sky-400 text-slate-950 px-4 py-2 rounded-lg transition">
+        Get in Touch
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-6 max-w-5xl mx-auto text-center">
+    <div class="inline-block text-xs font-medium text-sky-400 bg-sky-400/10 border border-sky-400/20 px-3 py-1 rounded-full mb-6">
+      Shipping Fast Web Interfaces & Autonomous AI Agents
+    </div>
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+      We Build High-Speed Frontends & <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">Custom AI Systems</span>
+    </h1>
+    <p class="text-slate-400 max-w-2xl mx-auto text-base md:text-lg mb-8">
+      VantaCore AI helps startups ship modern web interfaces, automate customer support, and build custom outbound/lead-gen AI workflows in record time.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="#work" class="bg-white text-slate-950 font-semibold px-6 py-3 rounded-xl hover:bg-slate-200 transition">View Selected Work</a>
+      <a href="#demo" class="glass text-white font-semibold px-6 py-3 rounded-xl hover:border-sky-400/50 transition">Test Live AI Agent</a>
+    </div>
+  </section>
+
+  <!-- Work Showcase -->
+  <section id="work" class="py-16 px-6 max-w-5xl mx-auto">
+    <h2 class="text-2xl font-bold mb-8">Selected Systems & Prototypes</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="glass p-6 rounded-2xl hover:border-sky-400/40 transition">
+        <div class="text-xs text-sky-400 font-semibold mb-2">AUTONOMOUS OUTREACH</div>
+        <h3 class="text-lg font-bold mb-2">VantaCore Lead Hunter</h3>
+        <p class="text-sm text-slate-400 mb-4">Multi-source web scraper & LLM personalization engine that identifies hiring startups and sends tailored 1-to-1 pitches automatically.</p>
+        <span class="text-xs text-slate-300 bg-slate-800 px-2.5 py-1 rounded">Node.js • OpenRouter • Nodemailer</span>
+      </div>
+      <div class="glass p-6 rounded-2xl hover:border-sky-400/40 transition">
+        <div class="text-xs text-indigo-400 font-semibold mb-2">CUSTOMER SUPPORT AI</div>
+        <h3 class="text-lg font-bold mb-2">Context-Aware Support Bot</h3>
+        <p class="text-sm text-slate-400 mb-4">Custom-trained website assistant that answers product queries, qualifies site visitors, and books calls 24/7 with zero lag.</p>
+        <span class="text-xs text-slate-300 bg-slate-800 px-2.5 py-1 rounded">React • LLM API • Tailwind</span>
+      </div>
+      <div class="glass p-6 rounded-2xl hover:border-sky-400/40 transition">
+        <div class="text-xs text-emerald-400 font-semibold mb-2">SAAS FRONTEND UI</div>
+        <h3 class="text-lg font-bold mb-2">Next-Gen SaaS Dashboard</h3>
+        <p class="text-sm text-slate-400 mb-4">Ultra-clean, responsive web application interface engineered for sub-second load times and high user conversion rates.</p>
+        <span class="text-xs text-slate-300 bg-slate-800 px-2.5 py-1 rounded">JavaScript • Modern UI/UX</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Real AI Chatbot Demo -->
+  <section id="demo" class="py-16 px-6 max-w-3xl mx-auto">
+    <div class="glass glow p-6 md:p-8 rounded-2xl">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="font-bold text-lg">Live AI Assistant Demo</h3>
+        <span class="text-xs text-emerald-400 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Secure Backend AI</span>
+      </div>
+
+      <div id="chatBox" class="h-48 overflow-y-auto space-y-3 text-sm bg-slate-950/70 p-4 rounded-xl border border-slate-800 mb-4">
+        <div class="text-sky-300"><strong>VantaCore Bot:</strong> Hey! Ask me how we can build your frontend or AI integration in 48 hours.</div>
+      </div>
+      <div class="flex gap-2">
+        <input id="userInput" type="text" placeholder="Type a message to the AI..." class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-sky-400" onkeydown="if(event.key === 'Enter') sendMsg()" />
+        <button onclick="sendMsg()" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold px-5 py-2.5 rounded-xl text-sm transition">Send</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-3">Ready to Ship Your Next Project?</h2>
+    <p class="text-slate-400 text-sm mb-6">Drop us a line or reply directly to our email. We build a free 2-minute prototype before you commit.</p>
+    <a href="mailto:hello@vantacore.ai" class="inline-block bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-8 py-3.5 rounded-xl transition">
+      Contact Us
+    </a>
+    <p class="text-xs text-slate-600 mt-12">© 2026 VantaCore AI. Built for speed.</p>
+  </section>
+
+  <!-- Client-Side Script pointing to Netlify Function -->
+  <script>
+    async function sendMsg() {
+      const input = document.getElementById('userInput');
+      const box = document.getElementById('chatBox');
+      
+      const val = input.value.trim();
+      if (!val) return;
+
+      box.innerHTML += `<div class="text-slate-200"><strong>You:</strong> ${val}</div>`;
+      input.value = '';
+      box.scrollTop = box.scrollHeight;
+
+      const loadingId = 'loading-' + Date.now();
+      box.innerHTML += `<div id="${loadingId}" class="text-sky-400 text-xs animate-pulse">VantaCore AI is thinking...</div>`;
+      box.scrollTop = box.scrollHeight;
+
+      try {
+        const response = await fetch("/.netlify/functions/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: val })
+        });
+
+        const data = await response.json();
+        const loadingElement = document.getElementById(loadingId);
+        if (loadingElement) loadingElement.remove();
+
+        if (data.error) {
+          box.innerHTML += `<div class="text-rose-400 text-xs"><strong>Error:</strong> ${data.error}</div>`;
+        } else {
+          box.innerHTML += `<div class="text-sky-300"><strong>VantaCore Bot:</strong> ${data.reply}</div>`;
+        }
+      } catch (err) {
+        const loadingElement = document.getElementById(loadingId);
+        if (loadingElement) loadingElement.remove();
+        box.innerHTML += `<div class="text-rose-400 text-xs"><strong>Network Error:</strong> Could not reach secure backend.</div>`;
+      }
+      box.scrollTop = box.scrollHeight;
+    }
+  </script>
+</body>
+</html>
